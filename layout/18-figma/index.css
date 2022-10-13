@@ -1,0 +1,35 @@
+input[id="list"]:checked ~ .project-list{
+    border: 1px solid red;
+}
+
+input[id="grid"]:checked ~ .project-list{
+    border: 1px solid blue;
+}
+
+input[id="list"]:checked ~ .project-actions [for="list"]{
+    background-color: red;
+}
+
+input[id="grid"]:checked ~ .project-actions [for="grid"]{
+    background-color: red;
+}
+
+.project-actions{
+    display: flex;
+    justify-content: flex-end;
+}
+
+label{
+    border: 1px solid red;
+    cursor: pointer;
+    user-select: none;
+    padding: 1rem;
+}
+
+input{
+    display: none;
+}
+
+body{
+    font-family: sans-serif;
+}
