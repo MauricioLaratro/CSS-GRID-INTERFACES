@@ -1,0 +1,44 @@
+.lesson{
+    font-family: Arial;
+    border: 5px solid red;
+
+    display: grid;
+    grid-template-columns: 8.75rem 1fr;
+    grid-template-areas: "thumb title" "description description";
+}
+
+.lesson-thumb{
+    border: 5px solid black;
+
+    grid-area: thumb;
+}
+
+.lesson-thumb img{
+    width: 100%;
+    vertical-align: middle;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.lesson-title{
+    border: 5px solid orange;
+    margin: 0;
+
+    grid-area: title;
+}
+
+.lesson-description{
+    border: 5px solid green;
+    margin: 0;
+
+    grid-area: description;
+}
+
+@media screen and (min-width: 768px) {
+    .lesson{
+        grid-template-areas: "thumb title" "thumb description";
+        grid-template-columns: 18.75rem 1fr;
+        grid-template-rows: auto 1fr;
+        /* establecemos grid-template-rows a partir de este tamaño para que la celda del titulo ocupe solo el tamaño de su contenido y la celda de la descripcion ocupe todo el espacio restante. */
+    }
+}
