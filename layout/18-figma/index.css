@@ -1,10 +1,75 @@
+/* estilos de la forma de lista */
+
 input[id="list"]:checked ~ .project-list{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
-input[id="grid"]:checked ~ .project-list{
-    border: 1px solid blue;
+input[id="list"]:checked ~ .project-list .project{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 50px 1fr 100px 100px;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
 }
+
+input[id="list"]:checked ~ .project-list .project img{
+    inline-size: 50px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* de aca para abajo empiezan los estilos de la forma grid */
+
+
+
+
+
+
+input[id="grid"]:checked ~ .project-list{
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+input[id="grid"]:checked ~ .project-list .project{
+    /* border: 1px solid green; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px auto auto;
+    align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+input[id="grid"]:checked ~ .project-list .project img{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    grid-row: 1 / 1;
+    grid-column: 1 / -1;
+}
+
+input[id="grid"]:checked ~ .project-list .project p{
+    display: grid;
+    grid-row: 2 / -1;
+    /* grid-column: 1 / 2; */
+    /* border: 1px solid red; */
+}
+
+input[id="grid"]:checked ~ .project-list .project time{
+    display: grid;
+    grid-column-start: 2;
+    justify-self: flex-end;
+    /* border: 1px solid blue; */
+}
+
+
+
+
+
+/* estilos generales */
 
 input[id="list"]:checked ~ .project-actions [for="list"]{
     background-color: red;
@@ -20,7 +85,7 @@ input[id="grid"]:checked ~ .project-actions [for="grid"]{
 }
 
 label{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     cursor: pointer;
     user-select: none;
     padding: 1rem;
