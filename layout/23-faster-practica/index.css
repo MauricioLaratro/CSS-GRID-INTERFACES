@@ -1,0 +1,60 @@
+:root{
+    --gridColumns: 1fr var(--phoneInlineSize) 1080px 1fr;
+    --phoneInlineSize: 200px;
+}
+
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: blue;
+    grid-area: header;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+    grid-template-rows: var(--phoneInlineSize);
+    grid-template-areas: "wrapper-start header header wrapper-end" "wrapper-start phone content wrapper-end";
+}
+
+.hero{
+    background-color: aquamarine;
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: var(--gridColumns);
+
+}
+
+.hero-content{
+    grid-row-start: 1;
+    grid-column-start: 3;
+}
+
+.phone{
+    grid-area: phone;
+    background-color: red;
+    aspect-ratio: 9/16;
+    inline-size: 200px;
+    position: sticky;
+    inset-block-start: 0;
+}
+
+section{
+    grid-column: 1 / -1;
+    display: flex;
+    min-block-size: 400px;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    counter-increment: section;
+    border: 1px solid purple;
+}
+
+section::after{
+    content: counter(section)
+}
