@@ -1,0 +1,188 @@
+.encabezado{
+    display: flex;
+    block-size: 12.77777777777778rem;
+    inline-size: 35.55555555555556rem;
+    gap: 2.4rem;
+    padding: 0;
+    margin: 0;
+    flex-shrink: 0;
+    margin-block-end: 1rem;
+}
+
+.encabezadoCover{
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+}
+
+.encabezadoCover img{
+    block-size: 12.77777777777778rem;
+    inline-size: 12.77777777777778rem;
+
+}
+
+.encabezadoDetails{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.encabezadoTitle{
+    font: var(--headline1);
+    color: var(--myWhite);
+
+}
+
+
+.encabezadoDetails h3{
+    margin: 0;
+}
+
+.encabezadoDetails button h3{
+    font-size: 1rem;
+}
+
+.encabezadoButton{
+    position: absolute;
+    bottom: 0;
+}
+
+.encabezadoButton-icon{
+    inline-size: 8.5rem;
+    block-size: 1.777777777777778rem;
+    background: transparent;
+    border-radius: 3.888888888888889rem;
+    border: none;
+    cursor: pointer;
+    background: var(--primaryColor);
+    color: var(--myWhite);
+}
+
+.songFilter{
+    margin-block-start: 1rem;
+    display: flex;
+    gap: .5rem;
+    position: relative;
+    margin-bottom: 2.2222222222222222222222222222222rem;
+}
+
+.slipknotPage-block{
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+.songFilter span{
+    padding-inline-start: 1.5rem;
+}
+
+.songFilter i{
+    position: absolute;
+    font-size: 1rem;
+    top: calc(50% - .5rem);
+    /* el calculo que hacemos en top es para que la lupa se centre y sea escalable, es decir que permanezca centrado aunque cambie el tamaño del elemento. */
+    block-size: 1rem;
+}
+
+.songDetails{
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 1;
+    gap: 12.777777777777777777777777777778rem;
+    margin-inline-end: 7.7777777777777777777777777777778rem;
+}
+
+
+.songDetails-titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.songDetails-artist{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.songDetails-album{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.songDates{
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    gap: 1rem;
+    justify-content: flex-end;
+}
+
+.songDetails-calendar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.songDetails-clock{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.songList{
+    color: var(--myWhite);
+    display: flex;
+    align-items: flex-start;
+    font: var(--baseFont);
+}
+
+.songList li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;   
+}
+
+
+.songList ul{
+    padding: 0;
+}
+
+.songList-calendar ul{
+    padding: 0;
+}
+
+.songList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1;
+
+}
+
+.songList-calendar li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;   
+}
+
+
+.songList-calendar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1;
+    color: var(--gray10);
+}
